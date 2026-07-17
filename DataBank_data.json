@@ -1,0 +1,253 @@
+{
+    "bank_name": "DataBank",
+    "bank_number": 2980374,
+    "interest_rate": 0.06,
+    "clients": [
+        {
+            "name": "Juan",
+            "dni": 1011232219,
+            "age": 25,
+            "profession": "Ingeniero",
+            "is_blacklisted": false,
+            "blacklist_reason": "",
+            "credits": []
+        },
+        {
+            "name": "Prisci",
+            "dni": 41560746,
+            "age": 75,
+            "profession": "Pensionada",
+            "is_blacklisted": false,
+            "blacklist_reason": "",
+            "credits": [
+                {
+                    "amount": 20000,
+                    "interest_rate": 0.06,
+                    "months": 10,
+                    "approved": true,
+                    "remaining_balance": 20000,
+                    "status": "Aprobado"
+                },
+                {
+                    "amount": 20000,
+                    "interest_rate": 0.06,
+                    "months": 10,
+                    "approved": true,
+                    "remaining_balance": 20000,
+                    "status": "Aprobado"
+                }
+            ]
+        },
+        {
+            "name": "Grillo",
+            "dni": 75416258,
+            "age": 19,
+            "profession": "Estudiante",
+            "is_blacklisted": false,
+            "blacklist_reason": "",
+            "credits": []
+        },
+        {
+            "name": "Nore",
+            "dni": 95624785,
+            "age": 80,
+            "profession": "Pensionada",
+            "is_blacklisted": false,
+            "blacklist_reason": "",
+            "credits": [
+                {
+                    "amount": 5000,
+                    "interest_rate": 0.06,
+                    "months": 53,
+                    "approved": false,
+                    "remaining_balance": 5000,
+                    "status": "Rechazado"
+                },
+                {
+                    "amount": 5000,
+                    "interest_rate": 0.06,
+                    "months": 53,
+                    "approved": false,
+                    "remaining_balance": 5000,
+                    "status": "Rechazado"
+                }
+            ]
+        }
+    ],
+    "employees": [
+        {
+            "employee_type": "Director",
+            "name": "Carolina",
+            "dni": 63947527,
+            "position": "Director",
+            "salary": 50000,
+            "experience": 3,
+            "is_blocked": false,
+            "failed_attempts": 0,
+            "can_change_role": true,
+            "locked_until": null,
+            "password": "julilaura",
+            "department": "Humanas"
+        },
+        {
+            "employee_type": "Administrative",
+            "name": "Diego",
+            "dni": 1011232219,
+            "position": "Administrativo",
+            "salary": 20000,
+            "experience": 2,
+            "is_blocked": false,
+            "failed_attempts": 0,
+            "can_change_role": false,
+            "locked_until": null,
+            "password": "julyalejo"
+        },
+        {
+            "employee_type": "Administrative",
+            "name": "Laura",
+            "dni": 1021678463,
+            "position": "Administrativo",
+            "salary": 20000,
+            "experience": 20,
+            "is_blocked": false,
+            "failed_attempts": 0,
+            "can_change_role": false,
+            "locked_until": null,
+            "password": "julilaura21."
+        }
+    ],
+    "accounts": [
+        {
+            "account_type": "SavingsAccount",
+            "bank_number": 2980374,
+            "account_number": "660523a0",
+            "client_dni": 95624785,
+            "balance": 0.0,
+            "interest_rate": 0.5,
+            "overdraft_limit": 0.0,
+            "account_active": false,
+            "commission_value": 0.0,
+            "creation_date": "2026-06-24T18:25:52.823039",
+            "locked_until": null,
+            "transactions": [],
+            "cards": [],
+            "daily_withdrawal_limit": 6
+        },
+        {
+            "account_type": "YoungAccount",
+            "bank_number": 2980374,
+            "account_number": "dd9e28d3",
+            "client_dni": 75416258,
+            "balance": 30000.0,
+            "interest_rate": 0.0,
+            "overdraft_limit": 0.0,
+            "account_active": false,
+            "commission_value": 0.0,
+            "creation_date": "2026-06-24T18:25:52.823000",
+            "locked_until": "2026-06-24T18:26:52.835863",
+            "transactions": [
+                {
+                    "id": "69105027",
+                    "date": "2026-06-24T18:25:52.835585",
+                    "type": "Depósito",
+                    "amount": 30000,
+                    "origin_account": "dd9e28d3",
+                    "destination_account": null,
+                    "description": "Depósito de: $30000"
+                }
+            ],
+            "cards": [
+                {
+                    "holder_name": "Grillo",
+                    "card_number": "95345BDE37C74A30",
+                    "expiration_date": "2030-06-23T18:25:52.823585",
+                    "account_number": "dd9e28d3",
+                    "card_type": "Crédito",
+                    "is_blocked": false
+                }
+            ],
+            "daily_withdrawal_limit": 5
+        },
+        {
+            "account_type": "CheckingAccount",
+            "bank_number": 2980374,
+            "account_number": "26dd14c3",
+            "client_dni": 41560746,
+            "balance": 118500.0,
+            "interest_rate": 0.0,
+            "overdraft_limit": -500,
+            "account_active": true,
+            "commission_value": 0.0,
+            "creation_date": "2026-06-24T18:25:52.822892",
+            "locked_until": null,
+            "transactions": [
+                {
+                    "id": "ce65ccdf",
+                    "date": "2026-06-24T18:25:52.822952",
+                    "type": "Depósito",
+                    "amount": 50000,
+                    "origin_account": "26dd14c3",
+                    "destination_account": null,
+                    "description": "Depósito de: $50000"
+                },
+                {
+                    "id": "307848c0",
+                    "date": "2026-06-24T18:25:52.823105",
+                    "type": "Retiro",
+                    "amount": 1500.0,
+                    "origin_account": "26dd14c3",
+                    "destination_account": null,
+                    "description": "Retiro de: $1500.0"
+                },
+                {
+                    "id": "c5d10453",
+                    "date": "2026-06-24T18:25:52.835473",
+                    "type": "Depósito",
+                    "amount": 100000,
+                    "origin_account": "26dd14c3",
+                    "destination_account": null,
+                    "description": "Depósito de: $100000"
+                },
+                {
+                    "id": "56da6594",
+                    "date": "2026-06-24T18:25:52.835545",
+                    "type": "Retiro",
+                    "amount": 30000,
+                    "origin_account": "26dd14c3",
+                    "destination_account": null,
+                    "description": "Retiro de: $30000"
+                },
+                {
+                    "id": "5449dbd1",
+                    "date": "2026-06-24T18:25:52.835611",
+                    "type": "Transferencia",
+                    "amount": 30000,
+                    "origin_account": "26dd14c3",
+                    "destination_account": "dd9e28d3",
+                    "description": "Transferencia de $30000 a la cuenta: Número de cuenta: dd9e28d3\nNúmero de banco: 2980374\nDNI: 75416258\nNombre del cliente: Grillo\nSaldo: 30000.0"
+                }
+            ],
+            "cards": [
+                {
+                    "holder_name": "Prisci",
+                    "card_number": "B2DB7BF446C34D72",
+                    "expiration_date": "2030-06-23T18:25:52.823418",
+                    "account_number": "26dd14c3",
+                    "card_type": "Débito",
+                    "is_blocked": false
+                }
+            ]
+        }
+    ],
+    "transactions": [],
+    "logs": [
+        {
+            "id": "3b618b5b",
+            "date": "2026-06-24T18:25:52.823127",
+            "employee_dni": 63947527,
+            "action": "Cuota de manejo",
+            "status": true,
+            "details": "Cobro de cuota de manejo"
+        }
+    ]
+}
