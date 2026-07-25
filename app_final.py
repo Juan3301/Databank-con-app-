@@ -12,13 +12,21 @@ from Servicios.auditlog import AuditLog
 from Servicios.promotion_request import PromotionRequest
 from Servicios.salary_inc_req import SalaryIncreaseRequest
 
-director = Director("Laura Espinosa", 1021678463, "Ingeniería", 1, "julilaura")
 
 bonus_admin = BonusAdmin()
 global bank
 bank = Bank("DataBank", 2980374, clients = [], employees = [], global_transactions= [], logs=[], bonus_admin= bonus_admin)
 
-bank.employees.append(director)
+# Se carga todo lo que ya se había guardado en corridas anteriores ANTES de crear
+# cualquier dato nuevo, para que la información vieja no se pierda.
+bank.import_data_json()
+
+# La directora por defecto solo se crea la primera vez
+if bank.search.search_employee_by_dni(1021678463) is None:
+    director = Director("Laura Espinosa", 1021678463, "Ingeniería", 1, "julilaura")
+    bank.employees.append(director)
+else:
+    director = bank.search.search_employee_by_dni(1021678463)
 
 databank_app = tk.Tk()
 palabra = tk.StringVar(databank_app) #guardar strings y se mapea a algun lugar de la app
@@ -3838,5 +3846,12 @@ def reject_promotion(director, bank, request):
     bank.register_log(log_entry)
 
     open_asc_module(director, bank)
+    
+def on_close():
+    bank.export_data_json()
+    databank_app.destroy()
+
+databank_app.protocol("WM_DELETE_WINDOW", on_close)
+
 
 databank_app.mainloop() #para que se refresque segun las acciones
