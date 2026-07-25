@@ -2,6 +2,7 @@
     "bank_name": "DataBank",
     "bank_number": 2980374,
     "interest_rate": 0.06,
+    "total_bonus": 0.0,
     "clients": [
         {
             "name": "Juan",
@@ -21,14 +22,8 @@
             "blacklist_reason": "",
             "credits": [
                 {
-                    "amount": 20000,
-                    "interest_rate": 0.06,
-                    "months": 10,
-                    "approved": true,
-                    "remaining_balance": 20000,
-                    "status": "Aprobado"
-                },
-                {
+                    "id": "86475adb",
+                    "request_date": "2026-07-25T09:34:51.241550",
                     "amount": 20000,
                     "interest_rate": 0.06,
                     "months": 10,
@@ -56,14 +51,8 @@
             "blacklist_reason": "",
             "credits": [
                 {
-                    "amount": 5000,
-                    "interest_rate": 0.06,
-                    "months": 53,
-                    "approved": false,
-                    "remaining_balance": 5000,
-                    "status": "Rechazado"
-                },
-                {
+                    "id": "785316fa",
+                    "request_date": "2026-07-25T09:34:51.241564",
                     "amount": 5000,
                     "interest_rate": 0.06,
                     "months": 53,
@@ -87,6 +76,7 @@
             "can_change_role": true,
             "locked_until": null,
             "password": "julilaura",
+            "register_date": "2026-07-25T09:34:51.239053",
             "department": "Humanas"
         },
         {
@@ -100,7 +90,8 @@
             "failed_attempts": 0,
             "can_change_role": false,
             "locked_until": null,
-            "password": "julyalejo"
+            "password": "julyalejo",
+            "register_date": "2026-07-25T09:34:51.240181"
         },
         {
             "employee_type": "Administrative",
@@ -113,21 +104,22 @@
             "failed_attempts": 0,
             "can_change_role": false,
             "locked_until": null,
-            "password": "julilaura21."
+            "password": "julilaura21.",
+            "register_date": "2026-07-25T09:34:51.239104"
         }
     ],
     "accounts": [
         {
             "account_type": "SavingsAccount",
             "bank_number": 2980374,
-            "account_number": "660523a0",
+            "account_number": "cc5d2d32",
             "client_dni": 95624785,
             "balance": 0.0,
             "interest_rate": 0.5,
             "overdraft_limit": 0.0,
             "account_active": false,
             "commission_value": 0.0,
-            "creation_date": "2026-06-24T18:25:52.823039",
+            "creation_date": "2026-07-25T09:34:51.241162",
             "locked_until": null,
             "transactions": [],
             "cards": [],
@@ -136,22 +128,22 @@
         {
             "account_type": "YoungAccount",
             "bank_number": 2980374,
-            "account_number": "dd9e28d3",
+            "account_number": "5d1c1bfe",
             "client_dni": 75416258,
             "balance": 30000.0,
             "interest_rate": 0.0,
             "overdraft_limit": 0.0,
             "account_active": false,
             "commission_value": 0.0,
-            "creation_date": "2026-06-24T18:25:52.823000",
-            "locked_until": "2026-06-24T18:26:52.835863",
+            "creation_date": "2026-07-25T09:34:51.241149",
+            "locked_until": "2026-07-25T09:35:51.246881",
             "transactions": [
                 {
-                    "id": "69105027",
-                    "date": "2026-06-24T18:25:52.835585",
+                    "id": "fe00510f",
+                    "date": "2026-07-25T09:34:51.246789",
                     "type": "Depósito",
                     "amount": 30000,
-                    "origin_account": "dd9e28d3",
+                    "origin_account": "5d1c1bfe",
                     "destination_account": null,
                     "description": "Depósito de: $30000"
                 }
@@ -159,10 +151,14 @@
             "cards": [
                 {
                     "holder_name": "Grillo",
-                    "card_number": "95345BDE37C74A30",
-                    "expiration_date": "2030-06-23T18:25:52.823585",
-                    "account_number": "dd9e28d3",
+                    "card_number": "2822201583630549",
+                    "cvv": "525",
+                    "pin": "5342",
+                    "expiration_date": "2030-07-24T09:34:51.241785",
+                    "account_number": "5d1c1bfe",
                     "card_type": "Crédito",
+                    "is_credit_card": true,
+                    "is_debit_card": false,
                     "is_blocked": false
                 }
             ],
@@ -171,83 +167,145 @@
         {
             "account_type": "CheckingAccount",
             "bank_number": 2980374,
-            "account_number": "26dd14c3",
+            "account_number": "c21b771f",
             "client_dni": 41560746,
             "balance": 118500.0,
             "interest_rate": 0.0,
             "overdraft_limit": -500,
             "account_active": true,
             "commission_value": 0.0,
-            "creation_date": "2026-06-24T18:25:52.822892",
+            "creation_date": "2026-07-25T09:34:51.241097",
             "locked_until": null,
             "transactions": [
                 {
-                    "id": "ce65ccdf",
-                    "date": "2026-06-24T18:25:52.822952",
+                    "id": "f9a9472d",
+                    "date": "2026-07-25T09:34:51.241133",
                     "type": "Depósito",
                     "amount": 50000,
-                    "origin_account": "26dd14c3",
+                    "origin_account": "c21b771f",
                     "destination_account": null,
                     "description": "Depósito de: $50000"
                 },
                 {
-                    "id": "307848c0",
-                    "date": "2026-06-24T18:25:52.823105",
+                    "id": "493876fd",
+                    "date": "2026-07-25T09:34:51.241471",
                     "type": "Retiro",
                     "amount": 1500.0,
-                    "origin_account": "26dd14c3",
+                    "origin_account": "c21b771f",
                     "destination_account": null,
                     "description": "Retiro de: $1500.0"
                 },
                 {
-                    "id": "c5d10453",
-                    "date": "2026-06-24T18:25:52.835473",
+                    "id": "c6d9bbe1",
+                    "date": "2026-07-25T09:34:51.246741",
                     "type": "Depósito",
                     "amount": 100000,
-                    "origin_account": "26dd14c3",
+                    "origin_account": "c21b771f",
                     "destination_account": null,
                     "description": "Depósito de: $100000"
                 },
                 {
-                    "id": "56da6594",
-                    "date": "2026-06-24T18:25:52.835545",
+                    "id": "74bb35fd",
+                    "date": "2026-07-25T09:34:51.246772",
                     "type": "Retiro",
                     "amount": 30000,
-                    "origin_account": "26dd14c3",
+                    "origin_account": "c21b771f",
                     "destination_account": null,
                     "description": "Retiro de: $30000"
                 },
                 {
-                    "id": "5449dbd1",
-                    "date": "2026-06-24T18:25:52.835611",
+                    "id": "c5083f04",
+                    "date": "2026-07-25T09:34:51.246801",
                     "type": "Transferencia",
                     "amount": 30000,
-                    "origin_account": "26dd14c3",
-                    "destination_account": "dd9e28d3",
-                    "description": "Transferencia de $30000 a la cuenta: Número de cuenta: dd9e28d3\nNúmero de banco: 2980374\nDNI: 75416258\nNombre del cliente: Grillo\nSaldo: 30000.0"
+                    "origin_account": "c21b771f",
+                    "destination_account": "5d1c1bfe",
+                    "description": "Transferencia de $30000 a la cuenta: Número de cuenta: 5d1c1bfe\nNúmero de banco: 2980374\nDNI: 75416258\nNombre del cliente: Grillo\nSaldo: 30000.0"
                 }
             ],
             "cards": [
                 {
                     "holder_name": "Prisci",
-                    "card_number": "B2DB7BF446C34D72",
-                    "expiration_date": "2030-06-23T18:25:52.823418",
-                    "account_number": "26dd14c3",
+                    "card_number": "2626749132255154",
+                    "cvv": "409",
+                    "pin": "2804",
+                    "expiration_date": "2030-07-24T09:34:51.241695",
+                    "account_number": "c21b771f",
                     "card_type": "Débito",
+                    "is_credit_card": false,
+                    "is_debit_card": true,
                     "is_blocked": false
                 }
             ]
         }
     ],
-    "transactions": [],
+    "transactions": [
+        {
+            "id": "f9a9472d",
+            "date": "2026-07-25T09:34:51.241133",
+            "type": "Depósito",
+            "amount": 50000,
+            "origin_account": "c21b771f",
+            "destination_account": null,
+            "description": "Depósito de: $50000"
+        },
+        {
+            "id": "493876fd",
+            "date": "2026-07-25T09:34:51.241471",
+            "type": "Retiro",
+            "amount": 1500.0,
+            "origin_account": "c21b771f",
+            "destination_account": null,
+            "description": "Retiro de: $1500.0"
+        },
+        {
+            "id": "c6d9bbe1",
+            "date": "2026-07-25T09:34:51.246741",
+            "type": "Depósito",
+            "amount": 100000,
+            "origin_account": "c21b771f",
+            "destination_account": null,
+            "description": "Depósito de: $100000"
+        },
+        {
+            "id": "74bb35fd",
+            "date": "2026-07-25T09:34:51.246772",
+            "type": "Retiro",
+            "amount": 30000,
+            "origin_account": "c21b771f",
+            "destination_account": null,
+            "description": "Retiro de: $30000"
+        },
+        {
+            "id": "fe00510f",
+            "date": "2026-07-25T09:34:51.246789",
+            "type": "Depósito",
+            "amount": 30000,
+            "origin_account": "5d1c1bfe",
+            "destination_account": null,
+            "description": "Depósito de: $30000"
+        },
+        {
+            "id": "c5083f04",
+            "date": "2026-07-25T09:34:51.246801",
+            "type": "Transferencia",
+            "amount": 30000,
+            "origin_account": "c21b771f",
+            "destination_account": "5d1c1bfe",
+            "description": "Transferencia de $30000 a la cuenta: Número de cuenta: 5d1c1bfe\nNúmero de banco: 2980374\nDNI: 75416258\nNombre del cliente: Grillo\nSaldo: 30000.0"
+        }
+    ],
     "logs": [
         {
-            "id": "3b618b5b",
-            "date": "2026-06-24T18:25:52.823127",
+            "id": "1280ca41",
+            "date": "2026-07-25T09:34:51.241485",
             "employee_dni": 63947527,
             "action": "Cuota de manejo",
             "status": true,
             "details": "Cobro de cuota de manejo"
         }
-    ]
+    ],
+    "audit_history": [],
+    "promotion_requests": [],
+    "salary_requests": []
 }
