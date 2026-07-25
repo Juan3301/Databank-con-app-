@@ -10,12 +10,16 @@ from datetime import timedelta
 class BankAccount:
     account_count: int = 0
 
-    def __init__(self, bank_number: int, client: Client, account_number: int | None = None):
+    def __init__(self, bank_number: int, client: Client, account_number: "int | str | None" = None):
         if bank_number is None or bank_number <= 0:
             raise ValueError("Es obligatorio un número de agencia válido")
-        if account_number is not None and account_number <= 0:
-            raise ValueError("Es obligatorio ingresar el número de cuenta")
-
+        if account_number is not None:
+            if isinstance(account_number, str):
+                if account_number.strip() == "":
+                    raise ValueError("Es obligatorio ingresar el número de cuenta")
+            elif account_number <= 0:
+                raise ValueError("Es obligatorio ingresar el número de cuenta")
+            
         self.bank_number = bank_number
         self.account_number = (
             account_number if account_number is not None

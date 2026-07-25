@@ -14,8 +14,10 @@ class ManageCredits:
         self.bank = bank
 
     def request_credit(self, client: Client, amount: float, months: int):
+        # El constructor de Credit ya se registra a sí mismo en client.credits
+        #(client.add_credit(self)) entonces aquí no hay que volver a agregarlo.
         credit = Credit(amount, self.bank.interest_rate, months, client)
-        client.credits.append(credit)
+
         return credit
 
     def approve_credit(self, employee: "Employee", client: Client, credit: Credit):

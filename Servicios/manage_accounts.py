@@ -17,7 +17,8 @@ class ManageAccounts:
     def __init__(self, bank: "Bank"):
         self.bank = bank
     
-    def create_account(self, employee: "Employee", client: "Client", account_type: str):
+    def create_account(self, employee: "Employee", client: "Client", account_type: str,
+                        nit: int | None = None, authorized_users: list["Client"] | None = None):
         self.bank.validate_permission(employee, "Crear_Cliente")
 
         account_types = {
@@ -32,10 +33,20 @@ class ManageAccounts:
 
         account_class = account_types[account_type]
 
-        account = account_class(
-            bank_number = self.bank.bank_number,
-            client = client
-        )
+        if account_type == "Empresarial":
+            if nit is None:
+                raise ValueError("Es obligatorio un NIT para crear una cuenta empresarial.")
+            account = BussinessAccount(
+                bank_number=self.bank.bank_number,
+                client=client,
+                nit=nit,
+                authorized_users=authorized_users if authorized_users is not None else []
+            )
+        else:
+            account = account_class(
+                bank_number = self.bank.bank_number,
+                client = client
+            )
 
         self.bank.accounts.append(account)
 

@@ -3,9 +3,10 @@ from Modelos.Roles.employee import Employee
 from datetime import datetime
 
 class Log:
-    def __init__(self, employee: Employee, action: str, status: bool, details: str = ""):
-        self.id = uuid.uuid4().hex[:8]
-        self.date = datetime.now()
+    def __init__(self, employee: Employee, action: str, status: bool, details: str = "",
+                 id: str | None = None, date: datetime | None = None):
+        self.id = id if id is not None else uuid.uuid4().hex[:8]
+        self.date = date if date is not None else datetime.now()
         self.employee = employee
         self.action = action
         self.status = status 

@@ -8,3 +8,7 @@ class BonusAdmin:
 
     def get_total_bonus(self):
         return self.__total_bonus
+
+    def set_total_bonus(self, value: float):
+        self.__total_bonus = value
+        

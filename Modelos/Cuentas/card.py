@@ -8,17 +8,19 @@ import uuid
 from datetime import datetime, timedelta
 
 class Card:
-    def __init__(self, account: "BankAccount", pin: str, credit_type: bool, debit_type: bool):
+    def __init__(self, account: "BankAccount", pin: str, credit_type: bool, debit_type: bool,
+                 card_number: str | None = None, cvv: str | None = None,
+                 expiration_date: datetime | None = None, is_blocked: bool = False):
         if credit_type and debit_type:
             raise ValueError("Una tarjeta no puede ser débito y crédito al mismo tiempo.")
         if not credit_type and not debit_type:
             raise ValueError("Una tarjeta debe ser débito o crédito.")
     
-        self.card_number = str(uuid.uuid4().int)[:16]
-        self.cvv = str(uuid.uuid4().int)[:3]
+        self.card_number = card_number if card_number is not None else str(uuid.uuid4().int)[:16]
+        self.cvv = cvv if cvv is not None else str(uuid.uuid4().int)[:3]
         self.__pin = pin
-        self.is_blocked = False
-        self.expiration_date = datetime.now() + timedelta(days=365 * 4)
+        self.is_blocked = is_blocked
+        self.expiration_date = expiration_date if expiration_date is not None else datetime.now() + timedelta(days=365 * 4)
         self.account = account
         self.holder = account.client
         self.is_credit_card = credit_type
@@ -52,8 +54,12 @@ class Card:
         return{
             "holder_name": self.holder.name,
             "card_number": self.card_number,
+            "cvv": self.cvv,
+            "pin": self.get_pin(),
             "expiration_date": self.expiration_date.isoformat(),
             "account_number": self.account.account_number,
             "card_type": self.card_type,
+            "is_credit_card": self.is_credit_card,
+            "is_debit_card": self.is_debit_card,
             "is_blocked": self.is_blocked
         }

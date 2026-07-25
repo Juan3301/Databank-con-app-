@@ -28,4 +28,5 @@ class AutenticatableEmployee(Employee):
     def to_dict(self):
         data = super().to_dict()
         data["password"] = self.get_password()
+        data["register_date"] = self.register_date.isoformat()
         return data

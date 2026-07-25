@@ -6,10 +6,12 @@ if TYPE_CHECKING:
     
 import uuid
 from datetime import datetime
+
 class Transaction:
-    def __init__(self, type: str, amount: float, origin_acc: "BankAccount", destination_acc, description: str):
-        self.id = uuid.uuid4().hex[:8]
-        self.date = datetime.now()
+    def __init__(self, type: str, amount: float, origin_acc: "BankAccount", destination_acc, description: str,
+           id: str | None = None, date: datetime | None = None):
+        self.id = id if id is not None else uuid.uuid4().hex[:8]
+        self.date = date if date is not None else datetime.now()
         self.type = type
         self.amount = amount
         self.origin_account = origin_acc
