@@ -187,31 +187,9 @@ class Bank:
         return True
     
     def register_log_e(self, log_entry):
+    # La auditoría se guarda en memoria y queda cubierta por
+    # export_data_json()/import_data_json() 
         self.audit_history.append(log_entry)
-
-        try:
-            log_data = {
-                "timestamp": log_entry.timestamp,
-                "action_type": log_entry.action_type,
-                "operator_name": log_entry.operator_name,
-                "target_name": log_entry.target_name,
-                "target_dni": log_entry.target_dni,
-                "details": log_entry.details
-            }
-            
-            try:
-                with open("audit_history.json", "r", encoding="utf-8") as file:
-                    history = json.load(file)
-            except FileNotFoundError:
-                history = []
-                
-            history.append(log_data)
-            
-            with open("audit_history.json", "w", encoding="utf-8") as file:
-                json.dump(history, file, indent=4, ensure_ascii=False)
-                
-        except Exception as e:
-            print(f"Error al escribir log en archivo: {e}")
     
     def _collect_all_transactions(self):
         """

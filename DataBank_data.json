@@ -106,6 +106,48 @@
             "locked_until": null,
             "password": "julilaura21.",
             "register_date": "2026-07-25T09:34:51.239104"
+        },
+        {
+            "employee_type": "Logistic",
+            "name": "Esteban Leon",
+            "dni": 123456789,
+            "position": "Logística",
+            "salary": 15000,
+            "experience": 5,
+            "is_blocked": false,
+            "failed_attempts": 0,
+            "can_change_role": false,
+            "locked_until": null,
+            "password": "1234567",
+            "register_date": "2026-07-25T09:46:33.932118"
+        },
+        {
+            "employee_type": "Administrative",
+            "name": "Empleado de Prueba",
+            "dni": 324567,
+            "position": "Administrativo",
+            "salary": 20000,
+            "experience": 2,
+            "is_blocked": false,
+            "failed_attempts": 0,
+            "can_change_role": false,
+            "locked_until": null,
+            "password": "0520",
+            "register_date": "2026-07-25T10:14:44.946604"
+        },
+        {
+            "employee_type": "Administrative",
+            "name": "Empleado de prueba 2",
+            "dni": 5454554,
+            "position": "Administrativo",
+            "salary": 20000,
+            "experience": 5,
+            "is_blocked": false,
+            "failed_attempts": 0,
+            "can_change_role": false,
+            "locked_until": null,
+            "password": "343536",
+            "register_date": "2026-07-25T10:23:16.019671"
         }
     ],
     "accounts": [
@@ -237,6 +279,45 @@
                     "is_blocked": false
                 }
             ]
+        },
+        {
+            "account_type": "SavingsAccount",
+            "bank_number": 2980374,
+            "account_number": "4426a00f",
+            "client_dni": 1011232219,
+            "balance": 50000.0,
+            "interest_rate": 0.5,
+            "overdraft_limit": 0.0,
+            "account_active": true,
+            "commission_value": 0.0,
+            "creation_date": "2026-07-25T09:48:17.626399",
+            "locked_until": null,
+            "transactions": [
+                {
+                    "id": "c89db62b",
+                    "date": "2026-07-25T09:48:50.248252",
+                    "type": "Depósito",
+                    "amount": 50000.0,
+                    "origin_account": "4426a00f",
+                    "destination_account": null,
+                    "description": "Depósito de: $50000.0"
+                }
+            ],
+            "cards": [
+                {
+                    "holder_name": "Juan",
+                    "card_number": "2245131108904814",
+                    "cvv": "180",
+                    "pin": "1234",
+                    "expiration_date": "2030-07-24T09:48:17.626445",
+                    "account_number": "4426a00f",
+                    "card_type": "Débito",
+                    "is_credit_card": false,
+                    "is_debit_card": true,
+                    "is_blocked": false
+                }
+            ],
+            "daily_withdrawal_limit": 6
         }
     ],
     "transactions": [
@@ -293,6 +374,15 @@
             "origin_account": "c21b771f",
             "destination_account": "5d1c1bfe",
             "description": "Transferencia de $30000 a la cuenta: Número de cuenta: 5d1c1bfe\nNúmero de banco: 2980374\nDNI: 75416258\nNombre del cliente: Grillo\nSaldo: 30000.0"
+        },
+        {
+            "id": "c89db62b",
+            "date": "2026-07-25T09:48:50.248252",
+            "type": "Depósito",
+            "amount": 50000.0,
+            "origin_account": "4426a00f",
+            "destination_account": null,
+            "description": "Depósito de: $50000.0"
         }
     ],
     "logs": [
@@ -305,7 +395,26 @@
             "details": "Cobro de cuota de manejo"
         }
     ],
-    "audit_history": [],
+    "audit_history": [
+        {
+            "id": "5ca5fe82",
+            "timestamp": "2026-07-25 10:14:44",
+            "action_type": "CREATE",
+            "operator_name": "Carolina",
+            "target_name": "Empleado de Prueba",
+            "target_dni": 324567,
+            "details": "Nueva contratación en el sistema."
+        },
+        {
+            "id": "a2ac200e",
+            "timestamp": "2026-07-25 10:23:16",
+            "action_type": "CREATE",
+            "operator_name": "Carolina",
+            "target_name": "Empleado de prueba 2",
+            "target_dni": 5454554,
+            "details": "Nueva contratación en el sistema."
+        }
+    ],
     "promotion_requests": [],
     "salary_requests": []
 }

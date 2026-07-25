@@ -17,8 +17,10 @@ class ManageEmployees:
     
     def add_employee(self, employee: "Employee", target: "Employee"):
         self.bank.validate_permission(employee, "Crear_Empleado")
+        if any(e.get_dni() == target.get_dni() for e in self.bank.employees):
+            raise ImpossibleOperationException(f"Ya existe un empleado registrado con el DNI {target.get_dni()}.")
         self.bank.employees.append(target)
-        print ("\nEmpleado añadido exitosamente.")
+        print("\nEmpleado añadido exitosamente.")
         return target
 
     def delete_employee(self, employee: "Employee", target: "Employee"):

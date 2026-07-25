@@ -3044,7 +3044,7 @@ def accept_salary_increase(director, bank, request, target_employee):
             target_dni=target_employee.dni,
             details=f"Aumento salarial aprobado. Motivo original: {request.reasons}"
         )
-        bank.register_log(log_entry)
+        bank.register_log_e(log_entry)
 
         if request in bank.salary_requests:
             bank.salary_requests.remove(request)
@@ -3065,7 +3065,7 @@ def reject_salary_increase(director, bank, request):
         target_dni=request.employee.dni,
         details="Solicitud de aumento salarial rechazada."
     )
-    bank.register_log(log_entry)
+    bank.register_log_e(log_entry)
 
     raise_salaries_module(director, bank)
 
@@ -3335,7 +3335,7 @@ def show_confirm_delete_screen(operator, bank, target_employee):
                 target_dni=target_employee.dni,
                 details=reasons
             )
-            bank.register_log(log_entry)
+            bank.register_log_e(log_entry)
             
             clean_screen()
             build_nav_bar_e(operator, bank)
@@ -3548,7 +3548,7 @@ def go_to_add_employee_screen(dni, bank, operator):
                 target_dni=dni,
                 details="Nueva contratación en el sistema."
             )
-            bank.register_log(log_entry)
+            bank.register_log_e(log_entry)
             print(f"Nuevo objeto Empleado guardado en el backend para {full_name} con cargo {role}.")
             
             create_add_users(operator, bank)
@@ -3822,7 +3822,7 @@ def accept_promotion(director, bank, request, target_employee):
             target_dni=target_employee.dni,
             details=f"Ascenso/Bono aprobado. Motivo original: {request.reasons}"
         )
-        bank.register_log(log_entry)
+        bank.register_log_e(log_entry)
 
         if request in bank.promotion_requests:
             bank.promotion_requests.remove(request)
@@ -3843,7 +3843,7 @@ def reject_promotion(director, bank, request):
         target_dni=request.employee.dni,
         details="Solicitud de ascenso rechazada."
     )
-    bank.register_log(log_entry)
+    bank.register_log_e(log_entry)
 
     open_asc_module(director, bank)
     
